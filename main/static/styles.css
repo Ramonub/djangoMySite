@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+h1.Title{
+    color: green;
+    font-size: 300%;
+    text-align: center;
+    margin: 1%;
+}
+
+.form {
+    height: 80px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.label {
+    font-size: 150%;
+}
+
+.buttonContainer {
+    height: 1px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 700px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.plot {
+    width: 1500px;
+    height: 700px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.values {
+    margin: 10px;
+}
+
+.resetContainer {
+    margin: 100px;
+}
