@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Real-Time app with Django Channels</title>
+</head>
+<body>
+    <h2>Sensor value: </h2>
+    <h2 id="sensorValue">{{sensorData}}</h2>
+    <h2>Number of values: </h2>
+    <h2 id="valueNumber">{{sensorData}}</h2>
+    <h2>Time from start: </h2>
+    <h2 id="time">{{sensorData}}</h2>
+    <h2>Frequency: </h2>
+    <h2 id="frequency">{{sensorData}}</h2>
+
+
+    <script>
+        var socket = new WebSocket('ws://192.168.252.32:8000/ws/index/');
+
+        socket.onmessage = function(event){
+            var data = JSON.parse(event.data);
+            console.log(data);
+            document.querySelector('#sensorValue').innerText = data.message;
+            document.querySelector('#valueNumber').innerText = data.messageNumber;
+            document.querySelector('#time').innerText = data.time;
+            document.querySelector('#frequency').innerText = data.messageNumber / data.time;
+        }
+    </script>
+</body>
+</html>

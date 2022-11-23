@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Testing</title>
+</head>
+<body>    
+    <h2>Sensor value: </h2>
+    <h2 id="sensorValue">{{sensorData}}</h2>
+    <h2>Number of values: </h2>
+    <h2 id="valueNumber">{{sensorData}}</h2>
+    <h2>Time from start: </h2>
+    <h2 id="time">{{sensorData}}</h2>
+    <h2>Frequency: </h2>
+    <h2 id="frequency">{{sensorData}}</h2>
+
+    <script>
+        var socket = new WebSocket('ws://192.168.252.32:8000/ws/index/');
+
+        socket.onmessage = function(event){
+            var data = JSON.parse(event.data);
+            document.querySelector('#sensorValue').innerText = data.message;
+            document.querySelector('#valueNumber').innerText = data.messageNumber;
+            document.querySelector('#time').innerText = data.time;
+            document.querySelector('#frequency').innerText = data.messageNumber / data.time;
+        }
+    </script>
+</body>
+</html>
