@@ -1,0 +1,6 @@
+<Material Type="Material">
+	<rho Type="float">7833.0</rho>
+	<E Type="float">210000.0</E>
+	<v Type="float">0.29</v>
+	<material_name Type="str">1.0038 (S235)</material_name>
+</Material>

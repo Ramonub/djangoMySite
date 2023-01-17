@@ -1,0 +1,35 @@
+<TensionNTieRods Type="TensionNTieRods">
+	<tie_rod Type="TensionRod">
+		<TensionRod Type="TensionRod">
+			<l_rod Type="float">293.1</l_rod>
+			<d_rod Type="int">13</d_rod>
+			<l_tube Type="float">293.1</l_tube>
+			<d_itube Type="int">19</d_itube>
+			<d_otube Type="float">34.5</d_otube>
+			<thread Type="Thread">
+				<Thread Type="Thread">
+					<d Type="float">17.0</d>
+					<d_pitch Type="float">15.7405</d_pitch>
+					<d_root Type="float">16.265</d_root>
+					<material Type="Material">
+						<Material Type="Material">
+							<rho Type="float">7833.0</rho>
+							<E Type="float">210000.0</E>
+							<v Type="float">0.29</v>
+							<material_name Type="str">1.0577 (S355)</material_name>
+						</Material>
+					</material>
+				</Thread>
+			</thread>
+			<material Type="Material">
+				<Material Type="Material">
+					<rho Type="float">7820.0</rho>
+					<E Type="float">210000.0</E>
+					<v Type="float">0.3</v>
+					<material_name Type="str">steel</material_name>
+				</Material>
+			</material>
+		</TensionRod>
+	</tie_rod>
+	<n Type="int">2</n>
+</TensionNTieRods>

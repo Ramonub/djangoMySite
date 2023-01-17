@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+    <head>
+        <link rel='shortcut icon' href='#'>
+        <title>Log page</title>
+        <link rel='stylesheet' href='{% static 'logs.css' %}'>
+    </head>
+<body>
+
+    <h1 class='Title'>Page for downloading parent logs</h1>
+
+    <h2>Last 15 downloadable log files</h2>
+
+    <h3>&#8594 &#8594 &#8594 <a class='link' href='http://192.168.252.32:8000/show/' target='_blank'>Or go to log page</a> &#8592 &#8592 &#8592</h3>
+    
+    <footer class='footer'>
+        <p>This is the web application for the tabletoprdc at Madern</p>
+    </footer>
+
+</body>
+    <script>
+
+        console.log(JSON.parse(localStorage.getItem('file_info')))
+        console.log(JSON.parse(localStorage.getItem('list_of_file_names')))
+        const file_info = JSON.parse(localStorage.getItem('file_info'));
+        const list_of_file_names = JSON.parse(localStorage.getItem('list_of_file_names'));
+
+        let array_length = list_of_file_names.length
+
+        
+        const divTag = document.createElement('div');
+        divTag.classList.add('container');
+        document.body.appendChild(divTag)
+        const preTag = document.createElement('pre');
+        divTag.appendChild(preTag)
+
+        for (let i = 0; i < array_length; i++) {
+            const innerPreTag = document.createElement('pre');
+            preTag.appendChild(innerPreTag)
+            const innerATag = document.createElement('a');
+            innerATag.classList.add('download_link')
+            innerATag.href = list_of_file_names[i]
+            innerATag.id = 'download_report_' + i
+            innerATag.target = '_blank'
+            innerATag.style = 'display: inline;'
+            innerATag.innerText = file_info[i]
+            innerPreTag.appendChild(innerATag)
+        }
+
+    </script>
+</html>

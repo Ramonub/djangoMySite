@@ -1,0 +1,194 @@
+<DataGui Type="DataGui">
+	<data_logger Type="NIDataLogger">
+		<NIDataLogger Type="NIDataLogger">
+			<task Type="ContinuousMadernTask">
+				<ContinuousMadernTask Type="ContinuousMadernTask">
+					<configuration Type="TaskConfiguration">
+						<TaskConfiguration Type="TaskConfiguration">
+							<sampling_rate Type="int">2000</sampling_rate>
+							<buffer_size Type="int">20000</buffer_size>
+							<clock_source Type="str">/SimMadernRD/PFI0</clock_source>
+							<chassis_name Type="str">SimMadernRD</chassis_name>
+							<task_name Type="str">GapTask</task_name>
+						</TaskConfiguration>
+					</configuration>
+					<sensors Type="SensorList">
+						<SensorList Type="SensorList">
+							<ai_list Type="list">
+								<index_0 Type="MEcapaNCDTSensor">
+									<MEcapaNCDTSensor Type="MEcapaNCDTSensor">
+										<device_name Type="str">SimMadernRDMod3</device_name>
+										<channel_index Type="int">0</channel_index>
+										<name Type="str">os_upper</name>
+										<scale Type="int">100</scale>
+										<unit Type="str">mu</unit>
+									</MEcapaNCDTSensor>
+								</index_0>
+								<index_1 Type="MEcapaNCDTSensor">
+									<MEcapaNCDTSensor Type="MEcapaNCDTSensor">
+										<device_name Type="str">SimMadernRDMod3</device_name>
+										<channel_index Type="int">1</channel_index>
+										<name Type="str">os_lower</name>
+										<scale Type="int">100</scale>
+										<unit Type="str">mu</unit>
+									</MEcapaNCDTSensor>
+								</index_1>
+								<index_2 Type="MEcapaNCDTSensor">
+									<MEcapaNCDTSensor Type="MEcapaNCDTSensor">
+										<device_name Type="str">SimMadernRDMod3</device_name>
+										<channel_index Type="int">2</channel_index>
+										<name Type="str">ds_upper</name>
+										<scale Type="int">100</scale>
+										<unit Type="str">mu</unit>
+									</MEcapaNCDTSensor>
+								</index_2>
+								<index_3 Type="MEcapaNCDTSensor">
+									<MEcapaNCDTSensor Type="MEcapaNCDTSensor">
+										<device_name Type="str">SimMadernRDMod3</device_name>
+										<channel_index Type="int">3</channel_index>
+										<name Type="str">ds_lower</name>
+										<scale Type="int">100</scale>
+										<unit Type="str">mu</unit>
+									</MEcapaNCDTSensor>
+								</index_3>
+							</ai_list>
+							<ci_list Type="list">
+								<index_0 Type="AngularX4Encoder">
+									<AngularX4Encoder Type="AngularX4Encoder">
+										<pulses_per_rev Type="int">2048</pulses_per_rev>
+										<device_name Type="str">SimMadernRDMod5</device_name>
+										<counter_index Type="int">0</counter_index>
+										<name Type="str">ToolAngle</name>
+									</AngularX4Encoder>
+								</index_0>
+							</ci_list>
+						</SensorList>
+					</sensors>
+				</ContinuousMadernTask>
+			</task>
+			<log_size Type="int">400000</log_size>
+		</NIDataLogger>
+	</data_logger>
+	<data_processor Type="OnlineDataProcessor">
+		<OnlineDataProcessor Type="OnlineDataProcessor">
+			<filter_list Type="FilterList">
+				<FilterList Type="FilterList">
+					<items Type="list">
+						<index_0 Type="ZeroSignals">
+							<ZeroSignals Type="ZeroSignals">
+								<signal_keys Type="SignalKeyList">
+									<SignalKeyList Type="SignalKeyList">
+										<items Type="list"/>
+									</SignalKeyList>
+								</signal_keys>
+							</ZeroSignals>
+						</index_0>
+						<index_1 Type="MathOperation">
+							<MathOperation Type="MathOperation">
+								<filter_operations Type="list">
+									<index_0 Type="NumpyOperation">
+										<NumpyOperation Type="NumpyOperation">
+											<argument_keys Type="list">
+												<index_0 Type="str">os_upper</index_0>
+												<index_1 Type="str">os_lower</index_1>
+											</argument_keys>
+											<function Type="ufunc">add</function>
+											<name Type="str">os_gap</name>
+										</NumpyOperation>
+									</index_0>
+									<index_1 Type="NumpyOperation">
+										<NumpyOperation Type="NumpyOperation">
+											<argument_keys Type="list">
+												<index_0 Type="str">ds_upper</index_0>
+												<index_1 Type="str">ds_lower</index_1>
+											</argument_keys>
+											<function Type="ufunc">add</function>
+											<name Type="str">ds_gap</name>
+										</NumpyOperation>
+									</index_1>
+								</filter_operations>
+							</MathOperation>
+						</index_1>
+					</items>
+					<sampling_rate Type="int">10</sampling_rate>
+				</FilterList>
+			</filter_list>
+			<sampling_rate Type="int">10</sampling_rate>
+		</OnlineDataProcessor>
+	</data_processor>
+	<buffer_size Type="int">20000</buffer_size>
+	<signal_labels Type="dict">
+		<os_acc Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">os_acc</name>
+				<unit Type="str">m/s2</unit>
+				<x Type="float">0.02</x>
+				<y Type="float">0.0</y>
+			</QTraitSignalLabel>
+		</os_acc>
+		<ds_acc Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">ds_acc</name>
+				<unit Type="str">m/s2</unit>
+				<x Type="float">0.82</x>
+				<y Type="float">0.0</y>
+			</QTraitSignalLabel>
+		</ds_acc>
+		<os_gap Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">os_gap</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.23</x>
+				<y Type="float">0.43</y>
+			</QTraitSignalLabel>
+		</os_gap>
+		<ds_gap Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">ds_gap</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.57</x>
+				<y Type="float">0.43</y>
+			</QTraitSignalLabel>
+		</ds_gap>
+		<os_upper Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">os_upper</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.2</x>
+				<y Type="float">0.32</y>
+			</QTraitSignalLabel>
+		</os_upper>
+		<os_lower Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">os_lower</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.2</x>
+				<y Type="float">0.54</y>
+			</QTraitSignalLabel>
+		</os_lower>
+		<ds_upper Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">ds_upper</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.6</x>
+				<y Type="float">0.32</y>
+			</QTraitSignalLabel>
+		</ds_upper>
+		<ds_lower Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">ds_lower</name>
+				<unit Type="str">mu</unit>
+				<x Type="float">0.6</x>
+				<y Type="float">0.55</y>
+			</QTraitSignalLabel>
+		</ds_lower>
+		<ToolAngle Type="QTraitSignalLabel">
+			<QTraitSignalLabel Type="QTraitSignalLabel">
+				<name Type="str">ToolAngle</name>
+				<unit Type="str">rad</unit>
+				<x Type="float">0.4</x>
+				<y Type="float">0.7</y>
+			</QTraitSignalLabel>
+		</ToolAngle>
+	</signal_labels>
+</DataGui>

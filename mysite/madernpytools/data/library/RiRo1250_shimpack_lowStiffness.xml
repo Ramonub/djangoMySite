@@ -1,0 +1,1 @@
+<RiRoShimPack Type="RiRoShimPack"><material Type="Material"><Material Type="Material"><E Type="float">1.0</E><material_name Type="str">LowStiffnessMat</material_name><rho Type="float">7833.0</rho><v Type="float">0.29</v></Material></material><surface_area Type="float">4010.0</surface_area><thickness Type="float">8.0</thickness></RiRoShimPack>
