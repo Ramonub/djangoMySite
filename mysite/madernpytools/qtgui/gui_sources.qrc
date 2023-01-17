@@ -1,5 +1,0 @@
-<RCC>
-  <qresource prefix="newPrefix">
-    <file>ema_schematic_tooling.png</file>
-  </qresource>
-</RCC>

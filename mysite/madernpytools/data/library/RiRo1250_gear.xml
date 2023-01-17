@@ -1,1 +1,0 @@
-<Gear Type="Gear"><d_bore Type="float">170.0</d_bore><d_pitch Type="float">370.0</d_pitch><material Type="Material"><Material Type="Material"><E Type="float">210000.0</E><material_name Type="str">1.0038 (S235)</material_name><rho Type="float">7833.0</rho><v Type="float">0.29</v></Material></material><module Type="int">3</module><width Type="float">50.0</width></Gear>
