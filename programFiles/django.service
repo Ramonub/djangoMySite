@@ -1,0 +1,14 @@
+[Unit]
+Description=Starting django
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/madern/django/mysite
+
+ExecStart=/home/madern/django/venv/bin/daphne mysite.asgi:application -b 192.168.252.32 -p 8000
+
+Restart=on-failure
+RestartSec=1s
+
+[Install]
+WantedBy=multi-user.target
