@@ -1,0 +1,22 @@
+<OTaperedBearing Type="OTaperedBearing">
+	<bearing Type="TaperedBearing">
+		<TaperedBearing Type="TaperedBearing">
+			<material Type="Material">
+				<Material Type="Material">
+					<rho Type="float">7833.0</rho>
+					<E Type="float">210000.0</E>
+					<v Type="float">0.29</v>
+					<material_name Type="str">1.0577 (S355)</material_name>
+				</Material>
+			</material>
+			<r_inner Type="float">76.1</r_inner>
+			<r_outer Type="float">88.7</r_outer>
+			<r_roller Type="float">6.25</r_roller>
+			<contact_length Type="float">13.7</contact_length>
+			<n_rollers Type="float">35.0</n_rollers>
+			<body_angle Type="float">0.232</body_angle>
+			<load Type="float">0.0</load>
+		</TaperedBearing>
+	</bearing>
+	<effective_distance Type="float">118.96</effective_distance>
+</OTaperedBearing>

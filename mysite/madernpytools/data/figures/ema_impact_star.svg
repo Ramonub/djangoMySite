@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.1440487mm"
+   height="8.1440487mm"
+   viewBox="0 0 28.856865 28.856865"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="/home/madern/R/madernpytools/madernpytools/figures/ema_impact_star.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   sodipodi:docname="ema_impact_star.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.839192"
+     inkscape:cx="-1.4994526"
+     inkscape:cy="13.744577"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-317.00013,-360.79093)">
+    <path
+       sodipodi:type="star"
+       style="display:inline;opacity:0.93000034;fill:#ba1c04;fill-opacity:1;stroke:#f68282;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:7.99999995, 0.99999999;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4251"
+       sodipodi:sides="8"
+       sodipodi:cx="331.42856"
+       sodipodi:cy="375.21936"
+       sodipodi:r1="14.275225"
+       sodipodi:r2="6.2013025"
+       sodipodi:arg1="0.22082877"
+       sodipodi:arg2="0.69810427"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 345.35713,378.34618 -9.17799,0.85917 2.88741,8.07399 -7.09734,-5.88229 -3.66747,7.75088 -0.85917,-9.17799 -8.07399,2.88741 5.88229,-7.09734 -7.75088,-3.66747 9.17799,-0.85917 -2.88741,-8.07399 7.09734,5.88229 3.66747,-7.75088 0.85917,9.17799 8.07399,-2.88741 -5.88229,7.09734 z"
+       inkscape:transform-center-x="-2.1281891"
+       inkscape:transform-center-y="-1.5634108" />
+  </g>
+</svg>

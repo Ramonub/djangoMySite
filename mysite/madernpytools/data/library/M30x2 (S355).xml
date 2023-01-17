@@ -1,0 +1,13 @@
+<Thread Type="Thread">
+	<d Type="float">30.0</d>
+	<d_pitch Type="float">27.709</d_pitch>
+	<d_root Type="float">28.578</d_root>
+	<material Type="Material">
+		<Material Type="Material">
+			<rho Type="float">7833.0</rho>
+			<E Type="float">210000.0</E>
+			<v Type="float">0.29</v>
+			<material_name Type="str">1.0577 (S355)</material_name>
+		</Material>
+	</material>
+</Thread>

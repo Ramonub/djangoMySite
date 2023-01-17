@@ -1,0 +1,1 @@
+<Shaft Type="Shaft"><inner_diameter Type="float">0.0</inner_diameter><length Type="float">1350.0</length><material Type="Material"><Material Type="Material"><E Type="float">210000.0</E><material_name Type="str">1.0038 (S235)</material_name><rho Type="float">7833.0</rho><v Type="float">0.29</v></Material></material><outer_diameter Type="float">370.0</outer_diameter></Shaft>

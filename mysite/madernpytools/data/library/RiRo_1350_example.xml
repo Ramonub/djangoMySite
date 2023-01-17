@@ -1,0 +1,292 @@
+<BobstToolset Type="BobstToolset">
+	<F_t Type="float">20000.0</F_t>
+	<layout Type="SimpleLayout">
+		<SimpleLayout Type="SimpleLayout">
+			<ax_line_length Type="float">850.0</ax_line_length>
+		</SimpleLayout>
+	</layout>
+	<lower_bearing_block Type="BearingBlock">
+		<BearingBlock Type="BearingBlock">
+			<bearing Type="TaperedBearing">
+				<TaperedBearing Type="TaperedBearing">
+					<body_angle Type="float">0.2071705822117269</body_angle>
+					<contact_length Type="float">11.735999999999999</contact_length>
+					<load Type="float">22060.128473739478</load>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0577 (S355)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<n_rollers Type="int">22</n_rollers>
+					<name Type="str"/>
+					<r_inner Type="float">46.7</r_inner>
+					<r_outer Type="float">57.7</r_outer>
+					<r_roller Type="float">5.9</r_roller>
+				</TaperedBearing>
+			</bearing>
+			<mass Type="float">60.0</mass>
+			<s Type="float">50.0</s>
+		</BearingBlock>
+	</lower_bearing_block>
+	<lower_cylinder Type="Cylinder">
+		<Cylinder Type="Cylinder">
+			<bearer_ring Type="BearerRing">
+				<BearerRing Type="BearerRing">
+					<angle Type="float">1.0</angle>
+					<diameter Type="float">370</diameter>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">200000.0</E>
+							<material_name Type="str">material</material_name>
+							<rho Type="float">7800.0</rho>
+							<v Type="float">0.27</v>
+						</Material>
+					</material>
+					<thickness Type="float">50.0</thickness>
+					<width Type="float">50.0</width>
+				</BearerRing>
+			</bearer_ring>
+			<body Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">1600</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">370</outer_diameter>
+				</Shaft>
+			</body>
+			<br_location Type="float">750</br_location>
+			<ds_shaft Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">216</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">370</outer_diameter>
+				</Shaft>
+			</ds_shaft>
+			<os_shaft Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">216</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">370</outer_diameter>
+				</Shaft>
+			</os_shaft>
+		</Cylinder>
+	</lower_cylinder>
+	<lower_gear Type="Gear">
+		<Gear Type="Gear">
+			<d_bore Type="float">170</d_bore>
+			<d_pitch Type="float">220.0</d_pitch>
+			<material Type="Material">
+				<Material Type="Material">
+					<E Type="float">210000.0</E>
+					<material_name Type="str">1.0038 (S235)</material_name>
+					<rho Type="float">7833.0</rho>
+					<v Type="float">0.29</v>
+				</Material>
+			</material>
+			<module Type="int">2</module>
+			<width Type="float">50.0</width>
+		</Gear>
+	</lower_gear>
+	<name Type="str">Toolset</name>
+	<q_cut Type="float">0.0</q_cut>
+	<spacer Type="SpacerNSetScrews">
+		<SpacerNSetScrews Type="SpacerNSetScrews">
+			<n Type="int">2</n>
+			<set_screw Type="SetScrew">
+				<SetScrew Type="SetScrew">
+					<diameter Type="float">27.0</diameter>
+					<height Type="float">8.0</height>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0577 (S355)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<thread Type="Thread">
+						<Thread Type="Thread">
+							<d Type="float">30.0</d>
+							<d_pitch Type="float">28.578</d_pitch>
+							<d_root Type="float">27.709</d_root>
+							<material Type="Material">
+								<Material Type="Material">
+									<E Type="float">210000.0</E>
+									<material_name Type="str">1.0577 (S355)</material_name>
+									<rho Type="float">7833.0</rho>
+									<v Type="float">0.29</v>
+								</Material>
+							</material>
+						</Thread>
+					</thread>
+				</SetScrew>
+			</set_screw>
+		</SpacerNSetScrews>
+	</spacer>
+	<tensioner Type="TensionRod">
+		<TensionRod Type="TensionRod">
+			<d_itube Type="float">21.0</d_itube>
+			<d_otube Type="float">35.0</d_otube>
+			<d_rod Type="float">192.0</d_rod>
+			<l_rod Type="float">283.0</l_rod>
+			<l_tube Type="float">11.0</l_tube>
+			<material Type="Material">
+				<Material Type="Material">
+					<E Type="float">210000.0</E>
+					<material_name Type="str">1.0577 (S355)</material_name>
+					<rho Type="float">7833.0</rho>
+					<v Type="float">0.29</v>
+				</Material>
+			</material>
+			<thread Type="Thread">
+				<Thread Type="Thread">
+					<d Type="float">17.0</d>
+					<d_pitch Type="float">15.7405</d_pitch>
+					<d_root Type="float">16.265</d_root>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0577 (S355)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+				</Thread>
+			</thread>
+		</TensionRod>
+	</tensioner>
+	<upper_bearing_block Type="BearingBlock">
+		<BearingBlock Type="BearingBlock">
+			<bearing Type="TaperedBearing">
+				<TaperedBearing Type="TaperedBearing">
+					<body_angle Type="float">0.2071705822117269</body_angle>
+					<contact_length Type="float">11.735999999999999</contact_length>
+					<load Type="float">22060.128473739478</load>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0577 (S355)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<n_rollers Type="int">22</n_rollers>
+					<name Type="str"/>
+					<r_inner Type="float">46.7</r_inner>
+					<r_outer Type="float">57.7</r_outer>
+					<r_roller Type="float">5.9</r_roller>
+				</TaperedBearing>
+			</bearing>
+			<mass Type="float">60.0</mass>
+			<s Type="float">50.0</s>
+		</BearingBlock>
+	</upper_bearing_block>
+	<upper_cylinder Type="Cylinder">
+		<Cylinder Type="Cylinder">
+			<bearer_ring Type="BearerRing">
+				<BearerRing Type="BearerRing">
+					<angle Type="float">1.0</angle>
+					<diameter Type="float">370</diameter>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">200000.0</E>
+							<material_name Type="str">material</material_name>
+							<rho Type="float">7800.0</rho>
+							<v Type="float">0.27</v>
+						</Material>
+					</material>
+					<thickness Type="float">50.0</thickness>
+					<width Type="float">50.0</width>
+				</BearerRing>
+			</bearer_ring>
+			<body Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">1600</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">370</outer_diameter>
+				</Shaft>
+			</body>
+			<br_location Type="float">750</br_location>
+			<ds_shaft Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">249.0</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">80.0</outer_diameter>
+				</Shaft>
+			</ds_shaft>
+			<os_shaft Type="Shaft">
+				<Shaft Type="Shaft">
+					<inner_diameter Type="float">0.0</inner_diameter>
+					<length Type="float">101.0</length>
+					<material Type="Material">
+						<Material Type="Material">
+							<E Type="float">210000.0</E>
+							<material_name Type="str">1.0038 (S235)</material_name>
+							<rho Type="float">7833.0</rho>
+							<v Type="float">0.29</v>
+						</Material>
+					</material>
+					<outer_diameter Type="float">80.0</outer_diameter>
+				</Shaft>
+			</os_shaft>
+		</Cylinder>
+	</upper_cylinder>
+	<upper_gear Type="Gear">
+		<Gear Type="Gear">
+			<d_bore Type="float">80.0</d_bore>
+			<d_pitch Type="float">220.0</d_pitch>
+			<material Type="Material">
+				<Material Type="Material">
+					<E Type="float">210000.0</E>
+					<material_name Type="str">1.0038 (S235)</material_name>
+					<rho Type="float">7833.0</rho>
+					<v Type="float">0.29</v>
+				</Material>
+			</material>
+			<module Type="int">2</module>
+			<width Type="float">50.0</width>
+		</Gear>
+	</upper_gear>
+</BobstToolset>

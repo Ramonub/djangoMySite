@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(239, 255, 236);
+}
+
+h1.Title{
+    color: rgb(0, 97, 0);
+    font-size: 300%;
+    text-align: center;
+    margin: 1%;
+}
+
+h2 {
+    color: rgb(0, 97, 0);
+    font-size: 150%;
+    text-align: center;
+    margin: 1%;
+}
+
+h3 {
+    color: rgb(0, 97, 0);
+    font-size: 150%;
+    text-align: center;
+    margin: 1%;
+}
+
+div.container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.download_link {
+    background-color: #000000;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.download_link:hover {
+    background-color: gray;
+}
+
+pre {
+    margin-bottom: 50px;
+}
+
+a.link {
+    color: green;
+}
+
+a.link:hover {
+    color: lightgreen
+}
+
+
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(40, 161, 40);
+    color: white;
+    text-align: center;
+}
