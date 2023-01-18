@@ -33,8 +33,8 @@ cd mod_wsgi-4.9.4
 python setup.py install && cd ..
 ```
 
-8. Run setup file
-If some packages wont download try to download them manually: pip install {package name}.
+8. Run setup file.\
+If some packages wont download try to download them manually: pip install {package name}.\
 Some packages can take a long time to download, so be patient.
 ```
 python setup.py
