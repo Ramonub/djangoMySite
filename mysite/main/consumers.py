@@ -72,7 +72,7 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
 
             file_name = self.room_group_name + '_log_' + datetime.now(pytz.timezone('Europe/Amsterdam')).strftime('%H%M%S') + '.csv'
             file_location = settings.MEDIA_ROOT + file_name
-
+            print("file", file_location)
             self.log.save(file_name)
             copyfile(file_name, file_location)
             os.remove(file_name)
@@ -185,7 +185,7 @@ class WSManager(AsyncConsumer):
 
         while self.running:
             self.list_of_values = system.get_sensor_values()
-            print(len(self.list_of_values))
+            # print(len(self.list_of_values))
 
             if self.list_of_values != []:
                 self.number_of_sensors = len(system.get_channels())

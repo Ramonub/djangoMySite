@@ -22,7 +22,6 @@ kiwisolver==1.4.4
 matplotlib==3.6.2
 mod-wsgi==4.9.4
 mod-wsgi-httpd==2.4.54.1
-mod-wsgi-standalone==4.9.4
 msgpack==1.0.4
 numpy==1.23.5
 opencv-python==4.6.0.66
