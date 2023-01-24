@@ -6,7 +6,7 @@ After=multi-user.target
 #WorkingDirectory=/home/madern/django/mysite
 
 ExecStartPre=sudo systemctl restart redis.service
-ExecStart=/home/madern/django/venv/bin/python /home/madern/django/mysite/manage.py runworker sensor_stream &
+ExecStart=/home/madern/djangoMySite/venv/bin/python /home/madern/djangoMySite/mysite/manage.py runworker sensor_stream &
 
 Restart=on-failure
 RestartSec=1s

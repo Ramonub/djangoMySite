@@ -3,7 +3,6 @@ from time import time
 from shutil import copyfile
 from datetime import datetime
 import asyncio, os
-# from main.ftsensor import ftSensor
 
 import traitlets
 from channels.generic.websocket import AsyncWebsocketConsumer
@@ -27,7 +26,7 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
             self.room_group_name,
             self.channel_name
         )
-        await self.channel_layer.send('sensor_stream', {'type': 'activate', 'group_name': self.room_group_name})
+        await self.channel_layer.send('sensor_stream', {'type': 'activate', 'group_name': self.room_group_name})    # Connection to channel
         
         self.log_active = False
         self.sensor_values = []
@@ -69,12 +68,10 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
             print('!!! Disabled logging !!!')
             self.log.active = False
             self.log_active = False
-
             file_name = self.room_group_name + '_log_' + datetime.now(pytz.timezone('Europe/Amsterdam')).strftime('%H%M%S') + '.csv'
             file_location = settings.MEDIA_ROOT + file_name
-            print("file", file_location)
             self.log.save(file_name)
-            copyfile(file_name, file_location)
+            copyfile(file_name, file_location) 
             os.remove(file_name)
             await self._send_logs()
 
@@ -87,7 +84,6 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
         # Logging
         if self.log_active:
             for sensor_value_number in range(0, len(self.sensor_values), self.number_of_sensors):
-                # samples = {'Rate': self.number_of_values, 'Timestep': self.start_time + (self.timestep * self.number_of_values)}
                 samples = {}
                 self.number_of_values += 1
                 for signal in range(self.number_of_sensors):
@@ -111,7 +107,6 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
             
     async def _send_logs(self):
         self.update()
-        # await sync_to_async(self.logModel.save)()
         await self.send(text_data=json.dumps({
             'file_info': self.list_of_logs_info,
             'list_of_file_names': self.list_of_logs
@@ -146,12 +141,10 @@ class WSConsumer(AsyncWebsocketConsumer, traitlets.HasTraits):
 
     @property
     def added_keys(self) -> ISignalKeyList:
-        # list_of_keys = ['Timestep']
         list_of_keys = []        
         for signal in range(self.number_of_sensors):
             list_of_keys.append('signal ' + str(signal))
         return msigs.SignalKeyList(list_of_keys)
-
 
 
 class WSManager(AsyncConsumer):
@@ -166,10 +159,6 @@ class WSManager(AsyncConsumer):
             self.DAQSystem = await sync_to_async(DAQHat.objects.first)()
             self.DAQSystem.create_daq()                     # Set DAQ HAT settings
             self.DAQSystem.start_sensor_scan()              # Starting sensor scan on DAQ HAT
-            
-            # self.ftSensor = ftSensor()
-            # self.ftSensor.getNumberOfConnectedSensors()
-            
             self.active = True
             asyncio.create_task(self.run_sensor(self.DAQSystem, event.get('group_name')))   # Create task with both system
 
@@ -185,8 +174,6 @@ class WSManager(AsyncConsumer):
 
         while self.running:
             self.list_of_values = system.get_sensor_values()
-            # print(len(self.list_of_values))
-
             if self.list_of_values != []:
                 self.number_of_sensors = len(system.get_channels())
                 await self.channel_layer.group_send(self.room_group_name, {

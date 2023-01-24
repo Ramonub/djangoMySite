@@ -134,20 +134,11 @@ USE_TZ = True
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = 'http://192.168.252.32:80'
-# Proberen:     BASE_URL = 'http://192.168252.32:80/'
-
 
 STATIC_URL = BASE_URL + '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = BASE_URL + '/media/'
 MEDIA_ROOT = os.path.join('media/')
-
-print(BASE_PATH)
-
-# STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
